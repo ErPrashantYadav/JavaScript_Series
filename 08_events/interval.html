@@ -21,10 +21,13 @@
     }
     let timeId;
      document.getElementById('start').addEventListener("click",function(){
+        if (!timeId){
         timeId= setInterval(sayTime,1000)
+     }
      })
      document.getElementById('stop').addEventListener("click",function(){
         clearTimeout(timeId)
+        timeId = null
      })
 
      
